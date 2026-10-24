@@ -1,0 +1,6 @@
+{
+  "name": "TradePulse",
+  "description": "Comprehensive investment portfolio tracker and market analysis app for live stocks, IPOs, mutual funds, and multi-asset wealth management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradePulse - Project Summary & Architecture Guide</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface: #131a2a;
+            --surface-variant: #1d263b;
+            --border: #28354d;
+            --primary: #00e676;
+            --accent: #3b82f6;
+            --warning: #f59e0b;
+            --danger: #ff5252;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            background-color: rgba(0, 230, 118, 0.15);
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+        }
+
+        p.lead {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .code-box {
+            background-color: var(--surface-variant);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            font-family: monospace;
+            font-size: 13px;
+            color: #38bdf8;
+            overflow-x: auto;
+            margin: 12px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .grid-item {
+            background-color: var(--surface-variant);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .grid-item h4 {
+            margin: 0 0 6px 0;
+            color: #ffffff;
+        }
+
+        .grid-item p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: #0b0f19;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">PROJECT EXPORT GUIDE</div>
+            <h1>TradePulse - Android Investment & Market Tracker</h1>
+            <p class="lead">Complete project structure, prompt summary, and download instructions for Google AI Studio.</p>
+        </header>
+
+        <div class="card">
+            <h2>📥 How to Download Your Project in AI Studio</h2>
+            <ol>
+                <li>
+                    <strong>Download as a ZIP File:</strong>
+                    <br>Click on the <strong>Settings / Menu icon (⋮ or gear)</strong> in the top-right corner of Google AI Studio and choose <strong>"Export Project as ZIP"</strong>. This saves the full Android source code, Gradle configurations, and drawables directly to your computer.
+                </li>
+                <li>
+                    <strong>Generate / Download APK:</strong>
+                    <br>Under the same Settings menu, select <strong>"Build APK"</strong> to generate the installable Android Package file (`.apk`) that you can directly install on any Android phone.
+                </li>
+                <li>
+                    <strong>Push to GitHub:</strong>
+                    <br>Link your GitHub account through the top bar menu to automatically create a repository and sync commits directly to your personal GitHub.
+                </li>
+                <li>
+                    <strong>Download Specific Files:</strong>
+                    <br>Open the left-hand <strong>File Explorer</strong> tab in AI Studio, right-click on any file (e.g., this HTML file, Kotlin classes, or icons), and select <strong>Download</strong>.
+                </li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>📱 Summary of Features Implemented</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h4>1. Markets Dashboard</h4>
+                    <p>Live trading session ticker, benchmark indices carousel/list (NIFTY, SENSEX, NASDAQ), Fear & Greed sentiment gauge, and sector heatmap.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>2. Live Stocks & Technicals</h4>
+                    <p>Stock symbol search with instant results, 52W range bars, valuation ratios (P/E, P/B), and simulated paper trading.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>3. Candlestick & Volume Chart</h4>
+                    <p>Interactive OHLCV wicks, volume bars, touch crosshair inspection, and toggleable EMA 20, Bollinger Bands, and VWAP overlays.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>4. Institutional Indicators</h4>
+                    <p>RSI (14), MACD (12, 26, 9) with histogram crossover, Moving Averages (EMA 20, 50/200 DMA Golden Cross), and Pivot Levels (S1/S2/R1/R2).</p>
+                </div>
+                <div class="grid-item">
+                    <h4>5. Derivatives & F&O Suite</h4>
+                    <p>Full Option Chain table (Calls, Puts, ATM Strike Highlight, OI, IV), Futures basis/premium, Put-Call Ratio (PCR) meter, and Max Pain.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>6. Real-Time Price Alerts</h4>
+                    <p>Set trigger thresholds (Crosses Above / Drops Below) with top floating notification banners and a dedicated Alerts Center.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>7. Multi-Asset Portfolio</h4>
+                    <p>Net worth tracking for Equities, Mutual Funds, IPOs, and Gold/Bonds with live P&L and asset allocation distribution.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>8. IPOs, Mutual Funds & SIP</h4>
+                    <p>Ongoing and upcoming IPOs with Grey Market Premium (GMP), mutual fund schemes, and interactive SIP wealth compounding calculator.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🛠️ Technical Stack & Architecture</h2>
+            <ul>
+                <li><strong>Language:</strong> Kotlin 100%</li>
+                <li><strong>UI Framework:</strong> Jetpack Compose + Material Design 3 (M3)</li>
+                <li><strong>Local Persistence:</strong> Android Room Database (`AppDatabase`, `HoldingDao`, `TransactionDao`, `WatchlistDao`, `AlertDao`)</li>
+                <li><strong>Architecture:</strong> MVVM (Model-View-ViewModel) + StateFlow & Coroutines</li>
+                <li><strong>Design & Assets:</strong> Custom fintech bull adaptive app icon across all mipmap densities</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
